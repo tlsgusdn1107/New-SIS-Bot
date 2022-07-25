@@ -1,4 +1,4 @@
-# Updated SIS Bot #
+# New SIS Bot (Updated) #
 
 This is an updated version of yzhan289's selenium bot to register for classes on SIS:
 https://github.com/yzhan289/New-SIS-Bot
