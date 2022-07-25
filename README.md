@@ -12,7 +12,7 @@ pip install -U selenium
 
 This selenium bot allows you to register for classes on the Johns Hopkins SIS portal right at 7:00 AM, virtually guaranteeing a spot in all of your classes. This will also automatically sign you up for any waitlisted classes.
 
-### General Setup (For both Mac and non-Mac users) ###
+## General Setup (For both Mac and non-Mac users) ##
 First, make sure all of the classes you want to register for are in your cart on SIS.
 
 ```
@@ -22,16 +22,16 @@ pip install -r requirements.txt
 brew install chromedriver
 ```
 
-### Option A: For both Mac and non-Mac Users ###
+## Option A: For both Mac and non-Mac Users ##
 
-## Running Instructions ##
+### Running Instructions ###
 Begin running at least a minute before 7:00 AM. The program will wait/keep running until 7:00 AM to register you for your classes. 
 ```
 python bot-automatic.py SIS_UserID SIS_Password
 ```
 
 
-### Option B: For Mac Users only ###
+## Option B: For Mac Users only ##
 
 SIS uses the naval observatory clock to determine time. Therefore, your system must be synced to this clock to ensure the bot does not click too early or too late. On Mac OS, it is really easy to change your default. 
 
@@ -43,7 +43,7 @@ SIS uses the naval observatory clock to determine time. Therefore, your system m
 ![time instructions](https://github.com/nkrishn9/SIS-Bot/blob/master/time_instruct.png "Logo Title Text 1")
 
 
-## Running Instructions ##
+### Running Instructions ###
 Begin running at least a minute before 7:00 AM. The program will wait/keep running until 7:00 AM to register you for your classes. 
 ```
 python bot-original.py SIS_UserID SIS_Password
