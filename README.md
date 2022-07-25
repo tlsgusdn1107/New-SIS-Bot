@@ -1,9 +1,7 @@
 # NEW SIS Bot #
 
-This is an updated version of nkrisn9's selenium bot to register for classes on SIS:
-https://github.com/nkrishn9/SIS-Bot
-
-I just updated this since nkrishn9 has since graduated.
+This is an updated version of yzhan289's selenium bot to register for classes on SIS:
+https://github.com/yzhan289/New-SIS-Bot
 
 ### UPDATE: Make sure you have the most updated version of Selenium: ###
 ```
@@ -21,8 +19,8 @@ This selenium bot allows you to register for classes on the Johns Hopkins SIS po
 First, make sure all of the classes you want to register for are in your cart on SIS.
 
 ```
-git clone https://github.com/yzhan289/New-SIS-Bot
-cd New-SIS-Bot
+git clone https://github.com/tlsgusdn1107/Updated-SIS-Bot
+cd Updated-SIS-Bot
 pip install -r requirements.txt
 brew install chromedriver
 ```
