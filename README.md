@@ -19,8 +19,8 @@ This selenium bot allows you to register for classes on the Johns Hopkins SIS po
 First, make sure all of the classes you want to register for are in your cart on SIS.
 
 ```
-git clone https://github.com/tlsgusdn1107/Updated-SIS-Bot
-cd Updated-SIS-Bot
+git clone https://github.com/tlsgusdn1107/New-SIS-Bot
+cd New-SIS-Bot
 pip install -r requirements.txt
 brew install chromedriver
 ```
@@ -38,7 +38,7 @@ SIS uses the naval observatory clock to determine time. Therefore, your system m
 ## Running Instructions ##
 Begin running at least a minute before 7:00 AM. The program will wait/keep running until 7:00 AM to register you for your classes. 
 ```
-python bot.py SIS_Username SIS_Password
+python bot.py SIS_UserID SIS_Password
 ```
 
 That's all you need to do! The bot will open a new window and sign in to your SIS account. At 7am it will click register to make sure you get the classes you want!
