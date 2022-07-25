@@ -3,6 +3,8 @@
 This is an updated version of yzhan289's selenium bot to register for classes on SIS:
 https://github.com/yzhan289/New-SIS-Bot
 
+The old repository is updated to work with chromedriver and extend the bot's applicability to non-Mac users.
+
 ### UPDATE: Make sure you have the most updated version of Selenium: ###
 ```
 pip install -U selenium
@@ -10,12 +12,7 @@ pip install -U selenium
 
 This selenium bot allows you to register for classes on the Johns Hopkins SIS portal right at 7:00 AM, virtually guaranteeing a spot in all of your classes. This will also automatically sign you up for any waitlisted classes.
 
-
-
-### WARNING: This has only been tested on Mac OS (and will probably only work on it). ###
-
-
-## Setup Instructions ##
+### General Setup (For both Mac and non-Mac users) ###
 First, make sure all of the classes you want to register for are in your cart on SIS.
 
 ```
@@ -24,6 +21,17 @@ cd New-SIS-Bot
 pip install -r requirements.txt
 brew install chromedriver
 ```
+
+### Option A: For both Mac and non-Mac Users ###
+
+## Running Instructions ##
+Begin running at least a minute before 7:00 AM. The program will wait/keep running until 7:00 AM to register you for your classes. 
+```
+python bot-automatic.py SIS_UserID SIS_Password
+```
+
+
+### Option B: For Mac Users only ###
 
 SIS uses the naval observatory clock to determine time. Therefore, your system must be synced to this clock to ensure the bot does not click too early or too late. On Mac OS, it is really easy to change your default. 
 
@@ -38,7 +46,9 @@ SIS uses the naval observatory clock to determine time. Therefore, your system m
 ## Running Instructions ##
 Begin running at least a minute before 7:00 AM. The program will wait/keep running until 7:00 AM to register you for your classes. 
 ```
-python bot.py SIS_UserID SIS_Password
+python bot-original.py SIS_UserID SIS_Password
 ```
+
+## Final Words ##
 
 That's all you need to do! The bot will open a new window and sign in to your SIS account. At 7am it will click register to make sure you get the classes you want!
