@@ -70,3 +70,5 @@ while True:
 				WebDriverWait(browser, 10)
 				cont.click()
 		break
+	elif datetime.now(timezone('US/Eastern')).time().minute < 59:
+		time.sleep(10)
