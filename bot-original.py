@@ -7,6 +7,7 @@ from selenium.webdriver.support.ui import Select
 import datetime
 import os
 import sys
+import time 
 
 usernameStr = 'REPLACE'
 passwordStr = 'REPLACE'
@@ -15,31 +16,42 @@ try:
 	usernameStr = sys.argv[1]
 	passwordStr = sys.argv[2]
 except BaseException:
-	print("\nError: This script should be run with the following (valid) flags:\n python bot.py SIS_Username SIS_Password\n")
+	print("\nError: This script should be run with the following (valid) flags:\n python bot.py SIS_UserID SIS_Password\n\nExample: \n python bot.py cshin12 applemint\n")
 	sys.exit(-1)
+if '@' in usernameStr:
+	print("\nError: This script should be run with the following (valid) flags:\n python bot.py SIS_UserID SIS_Password\n\nExample: \n python bot.py cshin12 applemint\n")
+	sys.exit(-1) 
+
+usernameStr += '@jh.edu'
 
 browser = webdriver.Chrome()
-browser.get(('https://sis.jhu.edu/sswf/'))
+browser.get(('https://sis.jhu.edu/sswf'))
 nextButton = browser.find_element_by_id('linkSignIn')
 nextButton.click()
-
-username = browser.find_element_by_id('USERdisplay')
-username.send_keys(usernameStr)
-
 WebDriverWait(browser, 10)
-password = browser.find_element_by_id('PASSWORD')
-password.send_keys(passwordStr)
+time.sleep(3)
 
-submit1button = browser.find_element_by_id("submit1")
-submit1button.click()
+username = browser.find_element_by_id('i0116')
+username.send_keys(usernameStr)
+nextButton2 = browser.find_element_by_id('idSIButton9')
+nextButton2.click()
+WebDriverWait(browser, 10)
+time.sleep(3)
+
+password = browser.find_element_by_id('i0118')
+password.send_keys(passwordStr)
+nextButton2 = browser.find_element_by_id('idSIButton9')
+nextButton2.click()
+WebDriverWait(browser, 10)
+time.sleep(3)
 
 WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "aspnetForm")))
 browser.get("https://sis.jhu.edu/sswf/SSS/EnrollmentCart/SSS_EnrollmentCart.aspx?MyIndex=88199")
+time.sleep(3)
 
-
-WebDriverWait(browser, 10)
 selectAll = browser.find_element_by_id('SelectAllCheckBox')
 selectAll.click()
+time.sleep(3)
 
 WebDriverWait(browser, 10)
 register = browser.find_element_by_id("ctl00_contentPlaceHolder_ibEnroll")
