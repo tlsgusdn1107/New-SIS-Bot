@@ -71,4 +71,4 @@ while True:
 				cont.click()
 		break
 	elif datetime.datetime.now().time().minute < 59:
-		time.sleep(10)
+		time.sleep(55)
